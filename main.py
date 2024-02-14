@@ -6,7 +6,7 @@ from urllib.parse import urljoin
 def crawl(page):
     result_urls = []
 
-    if len(result_urls) < 150:
+    while len(result_urls) < 150:
         try:
             c = urllib2.urlopen(page)
         except:
