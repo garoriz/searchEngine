@@ -35,5 +35,8 @@ def crawl(page):
 
 
 if __name__ == '__main__':
-    page = "https://ruitunion.org/posts/"
-    crawl(page)
+    #page = "https://ruitunion.org/posts/"
+    #crawl(page)
+
+    with open('index.txt', 'w', encoding='utf-8') as file:
+        file.write('')
