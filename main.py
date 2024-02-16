@@ -1,12 +1,24 @@
 import urllib.request as urllib2
+
 from bs4 import *
-from urllib.parse import urljoin
+import requests
+import os
+
+
+directory = "webpages"
+
+
+def save_page(url, webpage_index):
+    r = requests.get(url)
+    with open(os.path.join(directory, str(webpage_index) + '.html'), 'w', encoding='utf-8') as file:
+        file.write(r.content.decode())
 
 
 def crawl(page):
-    result_urls = []
+    os.mkdir(directory)
 
-    while len(result_urls) < 150:
+    webpage_index = 0
+    while webpage_index < 150:
         try:
             c = urllib2.urlopen(page)
         except:
@@ -16,14 +28,12 @@ def crawl(page):
 
         for link in links:
             if 'class' in dict(link.attrs) and link['class'] == ['entry-link']:
-                result_urls.append(link['href'])
+                save_page(link['href'], webpage_index)
+                webpage_index = webpage_index + 1
             if 'class' in dict(link.attrs) and link['class'] == ['next']:
                 page = link['href']
-    return result_urls
 
 
 if __name__ == '__main__':
     page = "https://ruitunion.org/posts/"
-    urls = crawl(page)
-    print(urls)
-    print(len(urls))
+    crawl(page)
