@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="add downloading htmls">
+    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="add creating index.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -98,13 +98,22 @@
       <option name="project" value="LOCAL" />
       <updated>1708081428801</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add creating index.txt">
+      <option name="closed" value="true" />
+      <created>1708084135705</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708084135705</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add crawling in first page" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="add downloading htmls" />
-    <option name="LAST_COMMIT_MESSAGE" value="add downloading htmls" />
+    <MESSAGE value="add creating index.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add creating index.txt" />
   </component>
 </project>

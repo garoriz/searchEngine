@@ -14,11 +14,16 @@ def save_page(url, webpage_index):
         file.write(r.content.decode())
 
 
+def write_in_index(webpage_index):
+    with open('index.txt', 'a', encoding='utf-8') as file:
+        file.write(webpage_index + " \n")
+
+
 def crawl(page):
     os.mkdir(directory)
 
     webpage_index = 0
-    while webpage_index < 150:
+    while webpage_index < 3:
         try:
             c = urllib2.urlopen(page)
         except:
@@ -29,14 +34,12 @@ def crawl(page):
         for link in links:
             if 'class' in dict(link.attrs) and link['class'] == ['entry-link']:
                 save_page(link['href'], webpage_index)
+                write_in_index(str(webpage_index))
                 webpage_index = webpage_index + 1
             if 'class' in dict(link.attrs) and link['class'] == ['next']:
                 page = link['href']
 
 
 if __name__ == '__main__':
-    #page = "https://ruitunion.org/posts/"
-    #crawl(page)
-
-    with open('index.txt', 'w', encoding='utf-8') as file:
-        file.write('')
+    page = "https://ruitunion.org/posts/"
+    crawl(page)
