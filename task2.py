@@ -1,12 +1,9 @@
 import os
-import xml
-
-import nltk
 import re
+
 import spacy
 from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
-
 from nltk.tokenize import word_tokenize
 
 CLEANR = re.compile('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});')
