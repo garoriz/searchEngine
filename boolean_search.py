@@ -31,10 +31,12 @@ def split_the_request():
 
 
 def get_result(request_token, split_read_line):
+    global IS_AND
     if request_token == split_read_line[0]:
         split_read_line.pop(0)
         if IS_AND:
             result.intersection_update(split_read_line)
+            IS_AND = False
         else:
             for elem in split_read_line:
                 result.add(elem)
