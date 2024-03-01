@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="fixed bug">
+    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="add main boolean search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boolean_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/boolean_search.py" afterDir="false" />
     </list>
@@ -35,19 +35,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.boolean_search.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.parser_for_creating_inverted_index.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task3.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.boolean_search.executor": "Run",
+    "Python.main.executor": "Debug",
+    "Python.parser_for_creating_inverted_index.executor": "Run",
+    "Python.task2.executor": "Run",
+    "Python.task3.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.boolean_search">
     <configuration name="boolean_search" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="searchEngine" />
@@ -265,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709114344308</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add main boolean search">
+      <option name="closed" value="true" />
+      <created>1709126136632</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709126136632</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -282,7 +290,8 @@
     <MESSAGE value="add inverted_index.txt and algorithm for creating this file" />
     <MESSAGE value="changed inverted_index.txt and parser_for_creating_inverted_index.py, added search with AND" />
     <MESSAGE value="fixed bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug" />
+    <MESSAGE value="add main boolean search" />
+    <option name="LAST_COMMIT_MESSAGE" value="add main boolean search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

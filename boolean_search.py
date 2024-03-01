@@ -104,8 +104,14 @@ def iterate_lines(file, request_token):
         split_read_line = read_line.split(' ')
         last_index = len(split_read_line) - 1
         split_read_line.pop(last_index)
-        get_result(request_token, split_read_line)
+        if request_token == split_read_line[0]:
+            split_read_line.pop(0)
+            split_read_line = set(split_read_line)
+            results.append(split_read_line)
+            return
         read_line = file.readline()
+
+    results.append(set())
 
 
 def evaluate_expression(expression):
@@ -147,6 +153,7 @@ def evaluate_expression(expression):
         elif token == NOT:
             result1 = results.pop()
             results.append(all_doc_ids.difference(result1))
+
     return results.pop()
 
 
@@ -156,5 +163,5 @@ if __name__ == '__main__':
     results = []
     # split_the_request_by_and()
     # print(result)
-    expression = "орор"
+    expression = "библиотека OR True AND ао OR Russia AND быть"
     print("Результат выражения:", evaluate_expression(expression))
