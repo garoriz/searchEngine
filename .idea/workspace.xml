@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="add main boolean search">
+    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="fix bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boolean_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/boolean_search.py" afterDir="false" />
     </list>
@@ -35,19 +35,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.boolean_search.executor": "Run",
-    "Python.main.executor": "Debug",
-    "Python.parser_for_creating_inverted_index.executor": "Run",
-    "Python.task2.executor": "Run",
-    "Python.task3.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.boolean_search.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.parser_for_creating_inverted_index.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.task3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.boolean_search">
     <configuration name="boolean_search" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="searchEngine" />
@@ -273,12 +273,27 @@
       <option name="project" value="LOCAL" />
       <updated>1709126136632</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix bug">
+      <option name="closed" value="true" />
+      <created>1709282589630</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1709282589630</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix bug">
+      <option name="closed" value="true" />
+      <created>1709283306873</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1709283306873</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add crawling in first page" />
-    <MESSAGE value="fix bug" />
     <MESSAGE value="add downloading htmls" />
     <MESSAGE value="add creating index.txt" />
     <MESSAGE value="add writing indices in index.txt" />
@@ -291,17 +306,7 @@
     <MESSAGE value="changed inverted_index.txt and parser_for_creating_inverted_index.py, added search with AND" />
     <MESSAGE value="fixed bug" />
     <MESSAGE value="add main boolean search" />
-    <option name="LAST_COMMIT_MESSAGE" value="add main boolean search" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/boolean_search.py</url>
-          <line>57</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
   </component>
 </project>
