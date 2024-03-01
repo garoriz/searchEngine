@@ -8,7 +8,7 @@ Operators = {'AND', 'OR', 'NOT', '(', ')'}
 
 Priority = {'OR': 1, 'AND': 2, 'NOT': 3}
 
-all_doc_ids = {doc_id for doc_id in range(0, 155)}
+all_doc_ids = {str(doc_id) for doc_id in range(0, 155)}
 
 
 def infix_to_postfix(tokens):
@@ -163,5 +163,5 @@ if __name__ == '__main__':
     results = []
     # split_the_request_by_and()
     # print(result)
-    expression = "библиотека OR True AND ао OR Russia AND быть"
-    print("Результат выражения:", evaluate_expression(expression))
+    expression = "NOT деньги AND Деньги OR NOT Martin"
+    print("Результат выражения:", sorted(evaluate_expression(expression)))
