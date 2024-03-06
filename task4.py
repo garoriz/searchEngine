@@ -8,6 +8,9 @@ from nltk import word_tokenize
 from nltk.corpus import stopwords
 
 COUNT_OF_WEBPAGES = 156
+DIRECTORY_TF_IDF = "tf_idf"
+TOKENS = "tokens"
+LEMMAS = "lemmas"
 
 
 def remove_btn_text_if_equals(url):
@@ -43,15 +46,6 @@ def get_count_of_docs_contains_word(word):
     return count_of_docs_contains_word
 
 
-def compute_tf_idf_for_words():
-    for i in range(COUNT_OF_WEBPAGES):
-        for word, frequency in word_frequency_dictionaries[i].items():
-            tf = frequency / counts_of_words_in_docs[i]
-
-            count_of_docs_contains_word = get_count_of_docs_contains_word(word)
-            idf = np.log10(COUNT_OF_WEBPAGES / count_of_docs_contains_word)
-
-
 def create_lemma_frequency_dictionaries():
     for i in range(COUNT_OF_WEBPAGES):
         lemma_count = {}
@@ -73,13 +67,28 @@ def get_count_of_docs_contains_lemma(lemma):
     return count_of_docs_contains_lemma
 
 
+def compute_tf_idf_for_words():
+    for i in range(COUNT_OF_WEBPAGES):
+        with open(os.path.join(DIRECTORY_TF_IDF, TOKENS, "tokens" + str(i) + ".txt"), 'a', encoding='utf-8') as tokens_file:
+            for word, frequency in word_frequency_dictionaries[i].items():
+                tf = frequency / counts_of_words_in_docs[i]
+
+                count_of_docs_contains_word = get_count_of_docs_contains_word(word)
+                idf = np.log10(COUNT_OF_WEBPAGES / count_of_docs_contains_word)
+                tf_idf = tf * idf
+                tokens_file.write(word + " " + str(idf) + " " + str(tf_idf) + "\n")
+
+
 def compute_tf_idf_for_lemmas():
     for i in range(COUNT_OF_WEBPAGES):
-        for lemma, frequency in lemma_frequency_dictionaries[i].items():
-            tf = frequency / counts_of_words_in_docs[i]
+        with open(os.path.join(DIRECTORY_TF_IDF, LEMMAS, "lemmas" + str(i) + ".txt"), 'a', encoding='utf-8') as lemma_file:
+            for lemma, frequency in lemma_frequency_dictionaries[i].items():
+                tf = frequency / counts_of_words_in_docs[i]
 
-            count_of_docs_contains_lemma = get_count_of_docs_contains_lemma(lemma)
-            idf = np.log10(COUNT_OF_WEBPAGES / count_of_docs_contains_lemma)
+                count_of_docs_contains_lemma = get_count_of_docs_contains_lemma(lemma)
+                idf = np.log10(COUNT_OF_WEBPAGES / count_of_docs_contains_lemma)
+                tf_idf = tf * idf
+                lemma_file.write(lemma + " " + str(idf) + " " + str(tf_idf) + "\n")
 
 
 if __name__ == '__main__':
@@ -90,6 +99,9 @@ if __name__ == '__main__':
     lemma_frequency_dictionaries = []
     counts_of_words_in_docs = []
     lemmas = []
+    os.mkdir(DIRECTORY_TF_IDF)
+    os.mkdir(DIRECTORY_TF_IDF + "/" + TOKENS)
+    os.mkdir(DIRECTORY_TF_IDF + "/" + LEMMAS)
     while webpage_index <= 155:
         all_tokens = []
         with open(os.path.join("webpages", str(webpage_index) + '.html'), 'r', encoding='utf-8') as file:
