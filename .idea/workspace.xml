@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="added creating txt files">
-      <change afterPath="$PROJECT_DIR$/task5.py" afterDir="false" />
+    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="added creating lemmas for task5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task5.py" beforeDir="false" afterPath="$PROJECT_DIR$/task5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +40,10 @@
     "Python.boolean_search.executor": "Debug",
     "Python.main.executor": "Debug",
     "Python.parser_for_creating_inverted_index.executor": "Run",
+    "Python.task1.executor": "Debug",
     "Python.task2.executor": "Run",
     "Python.task3.executor": "Run",
-    "Python.task4.executor": "Run",
+    "Python.task4.executor": "Debug",
     "Python.task5.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -161,8 +162,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="task5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="searchEngine" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.task5" />
         <item itemvalue="Python.task4" />
         <item itemvalue="Python.boolean_search" />
         <item itemvalue="Python.parser_for_creating_inverted_index" />
@@ -346,7 +370,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709725118654</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added creating lemmas for task5">
+      <option name="closed" value="true" />
+      <created>1710258294386</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1710258294386</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,10 +411,23 @@
     <MESSAGE value="started doing task4 (realize getting word frequency)" />
     <MESSAGE value="added computing tf idf" />
     <MESSAGE value="added creating txt files" />
-    <option name="LAST_COMMIT_MESSAGE" value="added creating txt files" />
+    <MESSAGE value="added creating lemmas for task5" />
+    <option name="LAST_COMMIT_MESSAGE" value="added creating lemmas for task5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/task5.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/task4.py</url>
+          <line>84</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -391,5 +436,10 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="result_vector" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
