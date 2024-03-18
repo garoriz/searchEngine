@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="added creating lemmas for task5">
+    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="added preparing query">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task5.py" beforeDir="false" afterPath="$PROJECT_DIR$/task5.py" afterDir="false" />
     </list>
@@ -37,6 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.a.executor": "Run",
     "Python.boolean_search.executor": "Debug",
     "Python.main.executor": "Debug",
     "Python.parser_for_creating_inverted_index.executor": "Run",
@@ -44,7 +45,7 @@
     "Python.task2.executor": "Run",
     "Python.task3.executor": "Run",
     "Python.task4.executor": "Debug",
-    "Python.task5.executor": "Debug",
+    "Python.task5.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -52,6 +53,28 @@
   }
 }]]></component>
   <component name="RunManager">
+    <configuration name="a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="searchEngine" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/a.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="boolean_search" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="searchEngine" />
       <option name="ENV_FILES" value="" />
@@ -118,28 +141,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="task2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="searchEngine" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/task2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="task4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="searchEngine" />
       <option name="ENV_FILES" value="" />
@@ -186,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.a" />
         <item itemvalue="Python.task5" />
         <item itemvalue="Python.task4" />
         <item itemvalue="Python.boolean_search" />
         <item itemvalue="Python.parser_for_creating_inverted_index" />
-        <item itemvalue="Python.task2" />
       </list>
     </recent_temporary>
   </component>
@@ -378,7 +379,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710258294386</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added preparing query">
+      <option name="closed" value="true" />
+      <created>1710421430356</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1710421430356</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,22 +421,11 @@
     <MESSAGE value="added computing tf idf" />
     <MESSAGE value="added creating txt files" />
     <MESSAGE value="added creating lemmas for task5" />
-    <option name="LAST_COMMIT_MESSAGE" value="added creating lemmas for task5" />
+    <MESSAGE value="added preparing query" />
+    <option name="LAST_COMMIT_MESSAGE" value="added preparing query" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/task5.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/task4.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
