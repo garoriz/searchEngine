@@ -115,7 +115,7 @@ def get_cosine_dists():
 
 
 def get_cosine_similarities():
-    cosine_similarities = []
+    result_cosine_similarities = []
     norm_query_vector = np.linalg.norm(query_vector)
     for vector in vectors:
         dot_product = np.dot(query_vector, vector)
@@ -124,15 +124,15 @@ def get_cosine_similarities():
         if norm_query_vector == 0 or norm_vector == 0:
             return 0
 
-        cosine_similarities.append(dot_product / (norm_query_vector * norm_vector))
-    return cosine_similarities
+        result_cosine_similarities.append(dot_product / (norm_query_vector * norm_vector))
+    return result_cosine_similarities
 
 
-def print_result(index, line):
+def add_to_result_urls(index, line):
     if cosine_similarities[index] > 0:
         split_line = line.split()
         url = split_line[1]
-        print(url)
+        result_urls.append(url)
 
 
 def iterate_in_index_txt():
@@ -140,12 +140,25 @@ def iterate_in_index_txt():
         line = file.readline()
         index = 0
         while line:
-            print_result(index, line)
+            add_to_result_urls(index, line)
             line = file.readline()
             index += 1
 
 
+def get_cos_similaries_indices_dictionary():
+    result_cosine_similarities_indices_dictionary = {}
+    with open('index.txt', 'r', encoding='utf-8') as file:
+        line = file.readline()
+        index = 0
+        while line:
+            result_cosine_similarities_indices_dictionary[line.split()[1]] = cosine_similarities[index]
+            line = file.readline()
+            index += 1
+    return result_cosine_similarities_indices_dictionary
+
+
 if __name__ == '__main__':
+    result_urls = []
     lemmas = get_lemmas()
     vectors = get_vectors()
     query = input()
@@ -156,4 +169,8 @@ if __name__ == '__main__':
     if cosine_similarities == 0:
         print("Ничего не найдено")
     else:
-        iterate_in_index_txt()
+        cosine_similarities_indices_dictionary = get_cos_similaries_indices_dictionary()
+        cosine_similarities_indices_dictionary = sorted(cosine_similarities_indices_dictionary.items(),
+                                                        key=lambda item: item[1], reverse=True)
+        cosine_similarities_indices_dictionary = cosine_similarities_indices_dictionary[:10]
+    print(cosine_similarities_indices_dictionary)
