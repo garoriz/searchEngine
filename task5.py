@@ -1,7 +1,6 @@
 import os
 import re
 
-import numpy
 import numpy as np
 import spacy
 from nltk import word_tokenize
@@ -25,16 +24,17 @@ def get_vectors():
     result_vectors = []
     index = 0
     while index <= 155:
-        result_vector = [0 for i in range(len(lemmas))]
+        result_vector = [0 for _ in range(len(lemmas))]
         with open(os.path.join("tf_idf", "lemmas", "lemmas" + str(index) + ".txt"), 'r',
                   encoding='utf-8') as lemma_file:
             line = lemma_file.readline()
             while line:
                 split_line = line.split()
-                result_vector[lemmas.index(split_line[0])] = split_line[2]
+                result_vector[lemmas.index(split_line[0])] = float(split_line[2])
                 line = lemma_file.readline()
         result_vectors.append(result_vector)
         index = index + 1
+    result_vectors = np.array(result_vectors)
     return result_vectors
 
 
@@ -103,7 +103,46 @@ def get_vector():
     for lemma, tf_idf in query_tf_idf.items():
         if lemma in lemmas:
             result_vector[lemmas.index(lemma)] = tf_idf
+    result_vector = np.array(result_vector)
     return result_vector
+
+
+def get_cosine_dists():
+    result_cosine_dists = []
+    for vector in vectors:
+        result_cosine_dists.append(spatial.distance.cosine(query_vector, vector))
+    return result_cosine_dists
+
+
+def get_cosine_similarities():
+    cosine_similarities = []
+    norm_query_vector = np.linalg.norm(query_vector)
+    for vector in vectors:
+        dot_product = np.dot(query_vector, vector)
+        norm_vector = np.linalg.norm(vector)
+
+        if norm_query_vector == 0 or norm_vector == 0:
+            return 0
+
+        cosine_similarities.append(dot_product / (norm_query_vector * norm_vector))
+    return cosine_similarities
+
+
+def print_result(index, line):
+    if cosine_similarities[index] > 0:
+        split_line = line.split()
+        url = split_line[1]
+        print(url)
+
+
+def iterate_in_index_txt():
+    with open('index.txt', 'r', encoding='utf-8') as file:
+        line = file.readline()
+        index = 0
+        while line:
+            print_result(index, line)
+            line = file.readline()
+            index += 1
 
 
 if __name__ == '__main__':
@@ -113,3 +152,8 @@ if __name__ == '__main__':
     query = prepare_query(query)
     query_tf_idf = get_query_tf_idf()
     query_vector = get_vector()
+    cosine_similarities = get_cosine_similarities()
+    if cosine_similarities == 0:
+        print("Ничего не найдено")
+    else:
+        iterate_in_index_txt()
