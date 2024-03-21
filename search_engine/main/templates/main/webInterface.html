@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="search-container">
-    <form method="post" action="search/">
+    <form method="post" action="">
         {% csrf_token %}
         <input name="query" type="text" id="search-input" placeholder="Введите запрос...">
         <button id="search-button" type="submit">Поиск</button>

@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="add Django and main url">
-      <change afterPath="$PROJECT_DIR$/search_engine/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="add form and post method">
+      <change afterPath="$PROJECT_DIR$/search_engine/main/engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/templates/main/results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_engine/main/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_engine/main/static/main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/static/main/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search_engine/main/templates/main/webInterface.html" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/templates/main/webInterface.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search_engine/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search_engine/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task5.py" beforeDir="false" afterPath="$PROJECT_DIR$/task5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,29 +43,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python.a.executor&quot;: &quot;Run&quot;,
-    &quot;Python.boolean_search.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.main.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.parser_for_creating_inverted_index.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.task4.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.task5.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.a.executor": "Run",
+    "Python.boolean_search.executor": "Debug",
+    "Python.main.executor": "Debug",
+    "Python.parser_for_creating_inverted_index.executor": "Run",
+    "Python.task1.executor": "Run",
+    "Python.task2.executor": "Run",
+    "Python.task3.executor": "Run",
+    "Python.task4.executor": "Debug",
+    "Python.task5.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\webScraping\search_engine" />
+      <recent name="D:\webScraping\search_engine\main" />
+      <recent name="D:\webScraping\search_engine\search_engine" />
       <recent name="D:\webScraping\search_engine\main\forms" />
       <recent name="D:\webScraping\search_engine\main\static\main" />
-      <recent name="D:\webScraping\search_engine\main\templates\main" />
     </key>
   </component>
   <component name="RunManager" selected="Python.task1">
@@ -424,7 +430,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710863588662</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add form and post method">
+      <option name="closed" value="true" />
+      <created>1710940815222</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1710940815222</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,7 +476,8 @@
     <MESSAGE value="added vector calculating" />
     <MESSAGE value="finished task 5" />
     <MESSAGE value="add Django and main url" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Django and main url" />
+    <MESSAGE value="add form and post method" />
+    <option name="LAST_COMMIT_MESSAGE" value="add form and post method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

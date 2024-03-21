@@ -5,9 +5,14 @@ import numpy as np
 import spacy
 from nltk import word_tokenize
 from nltk.corpus import stopwords
-from scipy import spatial
 
 COUNT_OF_WEBPAGES = 156
+
+
+cosine_similarities_indices_dictionary = {}
+result_urls = []
+lemmas = []
+vectors = []
 
 
 def get_lemmas():
@@ -62,7 +67,7 @@ def prepare_query(query_param):
     return result
 
 
-def get_lemma_count():
+def get_lemma_count(query):
     query_lemma_count = {}
     for lemma in query:
         if lemma in query_lemma_count:
@@ -84,8 +89,8 @@ def get_count_of_docs_contains_lemma(lemma):
     return count_of_docs_contains_lemma
 
 
-def get_query_tf_idf():
-    query_lemma_count = get_lemma_count()
+def get_query_tf_idf(query):
+    query_lemma_count = get_lemma_count(query)
     query_lemma_tfidf = {}
     for lemma, count in query_lemma_count.items():
         tf = count / len(query)
@@ -98,7 +103,7 @@ def get_query_tf_idf():
     return query_lemma_tfidf
 
 
-def get_vector():
+def get_vector(query_tf_idf):
     result_vector = [0 for _ in range(len(lemmas))]
     for lemma, tf_idf in query_tf_idf.items():
         if lemma in lemmas:
@@ -107,7 +112,8 @@ def get_vector():
     return result_vector
 
 
-def get_cosine_similarities():
+def get_cosine_similarities(query_vector):
+    global vectors
     result_cosine_similarities = []
     norm_query_vector = np.linalg.norm(query_vector)
     for vector in vectors:
@@ -121,24 +127,7 @@ def get_cosine_similarities():
     return result_cosine_similarities
 
 
-def add_to_result_urls(index, line):
-    if cosine_similarities[index] > 0:
-        split_line = line.split()
-        url = split_line[1]
-        result_urls.append(url)
-
-
-def iterate_in_index_txt():
-    with open('index.txt', 'r', encoding='utf-8') as file:
-        line = file.readline()
-        index = 0
-        while line:
-            add_to_result_urls(index, line)
-            line = file.readline()
-            index += 1
-
-
-def get_cos_similaries_indices_dictionary():
+def get_cos_similarities_indices_dictionary(cosine_similarities):
     result_cosine_similarities_indices_dictionary = {}
     with open('index.txt', 'r', encoding='utf-8') as file:
         line = file.readline()
@@ -150,20 +139,23 @@ def get_cos_similaries_indices_dictionary():
     return result_cosine_similarities_indices_dictionary
 
 
-if __name__ == '__main__':
-    result_urls = []
-    lemmas = get_lemmas()
-    vectors = get_vectors()
-    query = input()
+def search(query):
+    global cosine_similarities_indices_dictionary
     query = prepare_query(query)
-    query_tf_idf = get_query_tf_idf()
-    query_vector = get_vector()
-    cosine_similarities = get_cosine_similarities()
+    query_tf_idf = get_query_tf_idf(query)
+    query_vector = get_vector(query_tf_idf)
+    cosine_similarities = get_cosine_similarities(query_vector)
     if cosine_similarities == 0:
-        print("Ничего не найдено")
+        return []
     else:
-        cosine_similarities_indices_dictionary = get_cos_similaries_indices_dictionary()
+        cosine_similarities_indices_dictionary = get_cos_similarities_indices_dictionary(cosine_similarities)
         cosine_similarities_indices_dictionary = sorted(cosine_similarities_indices_dictionary.items(),
                                                         key=lambda item: item[1], reverse=True)
         cosine_similarities_indices_dictionary = cosine_similarities_indices_dictionary[:10]
-    print(cosine_similarities_indices_dictionary)
+    return cosine_similarities_indices_dictionary
+
+
+def load_vectors():
+    global lemmas, vectors
+    lemmas = get_lemmas()
+    vectors = get_vectors()
