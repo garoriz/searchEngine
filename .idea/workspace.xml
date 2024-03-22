@@ -4,15 +4,172 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="add form and post method">
-      <change afterPath="$PROJECT_DIR$/search_engine/main/engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/search_engine/main/templates/main/results.html" afterDir="false" />
+    <list default="true" id="09e9c58c-8f5b-4f7d-b68c-d8fbfad24383" name="Changes" comment="added results.html change style.css, loading vectors and searching">
+      <change afterPath="$PROJECT_DIR$/search_engine/main/index.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/lemmas.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/templates/main/no_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas100.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas101.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas102.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas103.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas104.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas105.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas106.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas107.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas108.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas109.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas11.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas110.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas111.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas112.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas113.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas114.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas115.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas116.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas117.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas118.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas119.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas12.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas120.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas121.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas122.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas123.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas124.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas125.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas126.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas127.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas128.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas129.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas13.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas130.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas131.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas132.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas133.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas134.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas135.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas136.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas137.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas138.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas139.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas14.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas140.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas141.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas142.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas143.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas144.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas145.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas146.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas147.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas148.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas149.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas15.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas150.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas151.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas152.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas153.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas154.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas155.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas16.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas17.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas18.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas20.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas21.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas22.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas23.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas24.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas25.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas26.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas27.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas28.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas29.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas30.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas31.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas32.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas33.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas34.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas35.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas36.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas37.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas38.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas39.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas40.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas41.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas42.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas43.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas44.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas45.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas46.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas47.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas48.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas49.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas50.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas51.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas52.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas53.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas54.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas55.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas56.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas57.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas58.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas59.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas60.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas61.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas62.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas63.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas64.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas65.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas66.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas67.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas68.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas69.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas70.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas71.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas72.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas73.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas74.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas75.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas76.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas77.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas78.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas79.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas80.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas81.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas82.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas83.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas84.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas85.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas86.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas87.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas88.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas89.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas9.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas90.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas91.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas92.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas93.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas94.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas95.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas96.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas97.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas98.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search_engine/main/tf_idf/lemmas/lemmas99.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search_engine/main/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_engine/main/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/engine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search_engine/main/static/main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/static/main/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search_engine/main/templates/main/webInterface.html" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/templates/main/webInterface.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search_engine/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_engine/main/templates/main/results.html" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/templates/main/results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search_engine/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/search_engine/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task4.py" beforeDir="false" afterPath="$PROJECT_DIR$/task4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task5.py" beforeDir="false" afterPath="$PROJECT_DIR$/task5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +180,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -59,13 +216,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/webScraping/search_engine/main",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\webScraping\search_engine" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\webScraping\search_engine\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\webScraping\search_engine\main" />
+      <recent name="D:\webScraping\search_engine" />
       <recent name="D:\webScraping\search_engine\search_engine" />
       <recent name="D:\webScraping\search_engine\main\forms" />
       <recent name="D:\webScraping\search_engine\main\static\main" />
@@ -438,7 +599,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710940815222</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="added results.html change style.css, loading vectors and searching">
+      <option name="closed" value="true" />
+      <created>1711027841598</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1711027841598</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,7 +646,8 @@
     <MESSAGE value="finished task 5" />
     <MESSAGE value="add Django and main url" />
     <MESSAGE value="add form and post method" />
-    <option name="LAST_COMMIT_MESSAGE" value="add form and post method" />
+    <MESSAGE value="added results.html change style.css, loading vectors and searching" />
+    <option name="LAST_COMMIT_MESSAGE" value="added results.html change style.css, loading vectors and searching" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

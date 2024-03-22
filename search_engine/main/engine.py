@@ -8,16 +8,17 @@ from nltk.corpus import stopwords
 
 COUNT_OF_WEBPAGES = 156
 
-
 cosine_similarities_indices_dictionary = {}
 result_urls = []
-lemmas = []
+all_lemmas = []
 vectors = []
+lemmas_by_docs = []
+index = []
 
 
 def get_lemmas():
     result_lemmas = []
-    with open('lemmas.txt', 'r', encoding='utf-8') as file:
+    with open(os.path.join("main", "lemmas.txt"), 'r', encoding='utf-8') as file:
         line = file.readline()
         while line:
             result_lemmas.append(line.split()[0])
@@ -29,13 +30,13 @@ def get_vectors():
     result_vectors = []
     index = 0
     while index <= 155:
-        result_vector = [0 for _ in range(len(lemmas))]
-        with open(os.path.join("tf_idf", "lemmas", "lemmas" + str(index) + ".txt"), 'r',
+        result_vector = [0 for _ in range(len(all_lemmas))]
+        with open(os.path.join("main", "tf_idf", "lemmas", "lemmas" + str(index) + ".txt"), 'r',
                   encoding='utf-8') as lemma_file:
             line = lemma_file.readline()
             while line:
                 split_line = line.split()
-                result_vector[lemmas.index(split_line[0])] = float(split_line[2])
+                result_vector[all_lemmas.index(split_line[0])] = float(split_line[2])
                 line = lemma_file.readline()
         result_vectors.append(result_vector)
         index = index + 1
@@ -79,13 +80,11 @@ def get_lemma_count(query):
 
 def get_count_of_docs_contains_lemma(lemma):
     count_of_docs_contains_lemma = 0
-    for index in range(COUNT_OF_WEBPAGES):
-        with open(os.path.join("tf_idf", "lemmas", "lemmas" + str(index) + ".txt"), 'r', encoding='utf-8') as file:
-            line = file.readline()
-            while line and lemma != line.split()[0]:
-                line = file.readline()
-            if line and lemma == line.split()[0]:
+    for i in range(COUNT_OF_WEBPAGES):
+        for lemma_by_doc in lemmas_by_docs[i]:
+            if lemma_by_doc == lemma:
                 count_of_docs_contains_lemma += 1
+                continue
     return count_of_docs_contains_lemma
 
 
@@ -104,10 +103,10 @@ def get_query_tf_idf(query):
 
 
 def get_vector(query_tf_idf):
-    result_vector = [0 for _ in range(len(lemmas))]
+    result_vector = [0 for _ in range(len(all_lemmas))]
     for lemma, tf_idf in query_tf_idf.items():
-        if lemma in lemmas:
-            result_vector[lemmas.index(lemma)] = tf_idf
+        if lemma in all_lemmas:
+            result_vector[all_lemmas.index(lemma)] = tf_idf
     result_vector = np.array(result_vector)
     return result_vector
 
@@ -128,14 +127,10 @@ def get_cosine_similarities(query_vector):
 
 
 def get_cos_similarities_indices_dictionary(cosine_similarities):
+    global index
     result_cosine_similarities_indices_dictionary = {}
-    with open('index.txt', 'r', encoding='utf-8') as file:
-        line = file.readline()
-        index = 0
-        while line:
-            result_cosine_similarities_indices_dictionary[line.split()[1]] = cosine_similarities[index]
-            line = file.readline()
-            index += 1
+    for line in index:
+        result_cosine_similarities_indices_dictionary[line.split()[1]] = cosine_similarities[int(line.split()[0])]
     return result_cosine_similarities_indices_dictionary
 
 
@@ -155,7 +150,30 @@ def search(query):
     return cosine_similarities_indices_dictionary
 
 
+def load_lemmas_by_docs():
+    for index in range(COUNT_OF_WEBPAGES):
+        lemmas = []
+        with open(os.path.join("main", "tf_idf", "lemmas", "lemmas" + str(index) + ".txt"), 'r',
+                  encoding='utf-8') as file:
+            line = file.readline()
+            while line:
+                lemmas.append(line.split()[0])
+                line = file.readline()
+        lemmas_by_docs.append(lemmas)
+
+
+def load_index():
+    global index
+    with open(os.path.join("main", "index.txt"), 'r', encoding='utf-8') as file:
+        line = file.readline()
+        while line:
+            index.append(line)
+            line = file.readline()
+
+
 def load_vectors():
-    global lemmas, vectors
-    lemmas = get_lemmas()
+    global all_lemmas, vectors
+    all_lemmas = get_lemmas()
+    load_lemmas_by_docs()
+    load_index()
     vectors = get_vectors()

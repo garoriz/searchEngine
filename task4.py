@@ -49,7 +49,7 @@ def get_count_of_docs_contains_word(word):
 def create_lemma_frequency_dictionaries():
     for i in range(COUNT_OF_WEBPAGES):
         lemma_count = {}
-        for line_in_lemmas in lemmas:
+        for line_in_lemmas in all_lemmas:
             count_of_lemmas = 0
             for lemma in line_in_lemmas:
                 if lemma in word_frequency_dictionaries[i]:
@@ -98,7 +98,7 @@ if __name__ == '__main__':
     word_frequency_dictionaries = []
     lemma_frequency_dictionaries = []
     counts_of_words_in_docs = []
-    lemmas = []
+    all_lemmas = []
     os.mkdir(DIRECTORY_TF_IDF)
     os.mkdir(DIRECTORY_TF_IDF + "/" + TOKENS)
     os.mkdir(DIRECTORY_TF_IDF + "/" + LEMMAS)
@@ -147,6 +147,6 @@ if __name__ == '__main__':
     compute_tf_idf_for_words()
     with open("lemmas.txt", 'r', encoding='utf-8') as lemmas_file:
         for line in lemmas_file:
-            lemmas.append(line.split())
+            all_lemmas.append(line.split())
     create_lemma_frequency_dictionaries()
     compute_tf_idf_for_lemmas()

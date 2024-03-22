@@ -24,13 +24,13 @@ def get_vectors():
     result_vectors = []
     index = 0
     while index <= 155:
-        result_vector = [0 for _ in range(len(lemmas))]
+        result_vector = [0 for _ in range(len(all_lemmas))]
         with open(os.path.join("tf_idf", "lemmas", "lemmas" + str(index) + ".txt"), 'r',
                   encoding='utf-8') as lemma_file:
             line = lemma_file.readline()
             while line:
                 split_line = line.split()
-                result_vector[lemmas.index(split_line[0])] = float(split_line[2])
+                result_vector[all_lemmas.index(split_line[0])] = float(split_line[2])
                 line = lemma_file.readline()
         result_vectors.append(result_vector)
         index = index + 1
@@ -99,10 +99,10 @@ def get_query_tf_idf():
 
 
 def get_vector():
-    result_vector = [0 for _ in range(len(lemmas))]
+    result_vector = [0 for _ in range(len(all_lemmas))]
     for lemma, tf_idf in query_tf_idf.items():
-        if lemma in lemmas:
-            result_vector[lemmas.index(lemma)] = tf_idf
+        if lemma in all_lemmas:
+            result_vector[all_lemmas.index(lemma)] = tf_idf
     result_vector = np.array(result_vector)
     return result_vector
 
@@ -152,7 +152,7 @@ def get_cos_similaries_indices_dictionary():
 
 if __name__ == '__main__':
     result_urls = []
-    lemmas = get_lemmas()
+    all_lemmas = get_lemmas()
     vectors = get_vectors()
     query = input()
     query = prepare_query(query)
